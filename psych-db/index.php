@@ -23,6 +23,6 @@ FILTER_VAR() function is used for sanitsation and validation-->
     <br>
     <input type="submit" name="submit" value='submit'></input>
 </form>
-</div>
 
-<!-- this is the path to the directroy where my footer.html file is from root-->
+<?php include "../settings/sitemap.html" ?>
+</div>

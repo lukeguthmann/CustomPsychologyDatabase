@@ -1,14 +1,19 @@
-<!-- SANTISING USER DATA .. helps to remove illegal chaarcters FROM INPUT that can cause webpage to be hacked 
-FILTER_VAR() function is used for sanitsation and validation-->
+<!-- This is the page that returns the description for a psychopathology that already exists
+     in the database. If it does not exist, then it prompts users -->
+     <div class='div_background'>
 
-<!-- this is the path to the directroy where my header.html file is from root-->
+<!-- connection information for the database -->
+<?php include "../database/database-connection.php" ?>
+
+<!-- connection to the database -->
+<? $db_connection = databaseConnection(); ?>
+
+<!-- connection information for the database -->
 <?php include "../settings/header.html" ?>
 
 <!-- css stylesheet -->
 <link rel="stylesheet" href="../settings/stylesheet.css">
 
-<!-- want to have pathology name, symptoms, definition and then a way to search the database-->
-<div class='div_background'>
 <form action="display_psychopathology.php" method="post">
     <input  type='text' name='path_search' placeholder="search for psychopathology" style="size:100"></input>
     <br>
@@ -17,16 +22,19 @@ FILTER_VAR() function is used for sanitsation and validation-->
     <input type="submit" name="submit" value='submit'></input>
 </form>
 <?php
-$db_connection = mysqli_connect('localhost', 'shaun', 'root', 'psychopathology');
+
 $mysql_query = "SELECT path_name FROM pathology";
 $make_query = mysqli_query($db_connection, $mysql_query);
 $mysql_results = mysqli_fetch_all($make_query, MYSQLI_ASSOC);
 
 //printing out results
-echo "<h3>Current psychopathologies in database</h3>";
+echo "<h3>Current psychopathology's in database</h3>";
 foreach($mysql_results as $result){
     echo htmlspecialchars($result['path_name']);
     echo "<br>";
 }
 ?>
+
+<?php include "../settings/sitemap.html" ?>
+
 </div>

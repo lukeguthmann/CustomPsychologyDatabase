@@ -145,10 +145,13 @@ $db_connection = databaseConnection();
         $execute_query = mysqli_query($db_connection, $construct_query);
 
         //displaying to the user that the data was entered
-        echo "DATE ENTERED INTO THE DATABASE.";
+        echo "DATA ENTERED INTO THE DATABASE.";
         mysqli_close($db_connection);
         }else{
             null;
         }
 ?>
+
+<?php include "../settings/sitemap.html" ?>
+
 </div>

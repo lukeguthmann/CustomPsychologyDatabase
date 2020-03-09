@@ -8,6 +8,9 @@
 <!-- connection information for the database -->
 <?php include "../settings/header.html" ?>
 
+<!-- css stylesheet -->
+<link rel="stylesheet" href="../settings/stylesheet.css">
+
 <!-- start php script -->
 <?php
     // getting the form  search input from psych-search.html
@@ -38,7 +41,7 @@
         // if a mysql query does not return anything because it does not exist in the database, then
         // the variable is given the value of NULL
         if($search_result == NULL){
-            echo " does not exist in database yet. Would you like to <a href='/psych-db'>ENTER</a> one?";
+            echo " does not exist in database yet. Would you like to <a href='/psych-db'>enter</a> one?";
         
         /* if what the user entered DOES exist in the database, take that row of information but only print out the
         PATH_DESCRIPTION COLUMN, not the id, or path_name, or time etc */
@@ -50,11 +53,7 @@
         echo htmlspecialchars($err->getMessage());
     }
 
-
-    
-
-
-
-
 ?>
+<?php include "../settings/sitemap.html" ?>
 </div>
+
