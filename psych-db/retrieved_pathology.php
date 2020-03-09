@@ -152,6 +152,7 @@ $db_connection = databaseConnection();
         }
 ?>
 
+<!-- site map for easier navigation -->
 <?php include "../settings/sitemap.html" ?>
 
 </div>

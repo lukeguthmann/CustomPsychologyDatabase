@@ -1,10 +1,9 @@
-<!-- SANTISING USER DATA .. helps to remove illegal chaarcters FROM INPUT that can cause webpage to be hacked 
-FILTER_VAR() function is used for sanitsation and validation-->
+
 <!-- this is the path to the directroy where my header.html file is from root-->
 <link rel="stylesheet" type='text/css' href="../settings/stylesheet.css" />
 
+<!-- header document included -->
 <?php include '../settings/header.html' ?>
-
 
 <!-- want to have pathology name, symptoms, definition and then a way to search the database-->
 <div class='div_background'>

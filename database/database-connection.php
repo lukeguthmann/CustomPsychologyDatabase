@@ -5,5 +5,6 @@ function databaseConnection(){
         echo 'database error:' . mysqli_connect_error();
     }else {
         return $db_connection;
-    } }
+        }
+    }
 ?>

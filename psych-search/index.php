@@ -27,7 +27,7 @@ $mysql_query = "SELECT path_name FROM pathology";
 $make_query = mysqli_query($db_connection, $mysql_query);
 $mysql_results = mysqli_fetch_all($make_query, MYSQLI_ASSOC);
 
-//printing out results
+// printing out results
 echo "<h3>Current psychopathology's in database</h3>";
 foreach($mysql_results as $result){
     echo htmlspecialchars($result['path_name']);
