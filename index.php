@@ -5,9 +5,15 @@
     <form action="display_psychopathology.php" method="post">
 
 <!-- link to make a submission into the database -->
-    <h1> <a href='psych-db'>Enter psychopathology into Database </a> </h1>
+<span class="landing_page_text">  <a href='psych-db'> >> Enter psychopathology into database </a> </span>
+<br />
+<br />
 
 <!-- link to checkout the database and search it -->
-    <h1> <a href='psych-search'>Search or read database </a> </h1>
+<span class="landing_page_text"> <a href='psych-search'>  >> Search database </a> </span>
+<br />
+<br />
 
+<!-- Delete entry from database -->
+    <span class="landing_page_text"> <a href='delete-psychopathology'> >> Delete entry from database </a> </span>
 </div>
