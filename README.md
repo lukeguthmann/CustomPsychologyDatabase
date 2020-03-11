@@ -23,6 +23,6 @@ to your own tokens.
 
 
 ## Program screnshot.
-<img src="screen.jpg" width="1200">
+<img src="screen.jpg" width="800">
 
 

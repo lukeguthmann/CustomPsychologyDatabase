@@ -1,6 +1,6 @@
 <?php
 function databaseConnection(){
-    $db_connection = mysqli_connect('localhost', 'shaun', 'root', 'psychopathologyDB');
+    $db_connection = mysqli_connect('YOURHOST', 'USERNAME', 'PASSWORD', 'DATABASE');
     if(!$db_connection){
         echo 'database error:' . mysqli_connect_error();
     }else {
