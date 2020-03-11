@@ -28,7 +28,9 @@
       $make_query = mysqli_query($db_connection, $query_psychopatholgy);
       
       $store_result = mysqli_fetch_all($make_query, MYSQLI_ASSOC);
-
+      if(empty($store_result)){
+            echo "database is empty";
+      }
       foreach($store_result as $res){
             print_r($res['path_name']);
             echo "<br>";

@@ -33,6 +33,10 @@ foreach($mysql_results as $result){
     echo htmlspecialchars($result['path_name']);
     echo "<br>";
 }
+
+if(empty($mysql_results)){
+    echo "database is empty";
+}
 ?>
 
 <?php include "../settings/sitemap.html" ?>
