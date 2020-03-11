@@ -107,7 +107,7 @@ $db_connection = databaseConnection();
             $path_symptoms = mysqli_real_escape_string($db_connection, $path_symptoms);
             
             // showing the user that the symptoms weren't entered (but it is allowered)
-            echo "No symptoms entered. ";
+            echo htmlspecialchars("No symptoms entered. ");
         }
         /* IF it is true that the path_description variable where the user entered into the html form field is empty
          and the pathology does not already exist in the database, execute this code */
@@ -145,7 +145,7 @@ $db_connection = databaseConnection();
         $execute_query = mysqli_query($db_connection, $construct_query);
 
         //displaying to the user that the data was entered
-        echo "DATA ENTERED INTO THE DATABASE.";
+        echo htmlspecialchars("DATA ENTERED INTO THE DATABASE.");
         mysqli_close($db_connection);
         }else{
             null;
